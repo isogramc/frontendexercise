@@ -1,0 +1,268 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+h1, h2, h3{
+  margin: 0px;
+  padding: 0px;
+}
+
+h4{
+  text-align: center;
+}
+
+/* header */
+
+.header{
+  width: 100%;
+  height: 80px;
+  top: 0px;
+  background-color: #8b0025;
+  font-size: 12px;
+  color: #fff;
+}
+
+.header-alignment{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.sub-heading{
+  font-size: 8px;
+}
+
+/* main content - image backgrounds */
+
+.main-content{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.content-container{
+  width:calc(100% / 3);
+  height: 500px;
+}
+
+.all-images{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.left-img{
+  background-image: url("/public/assets/images/product-2-transparent.png");
+  box-shadow:inset 0 0 0 2000px rgba(236, 242, 244, 0.5);
+}
+
+.right-img{
+  display: block;
+  background-image: url("/public/assets/images/product-1-transparent.png");
+  box-shadow:inset 0 0 0 2000px rgba(236, 242, 244, 0.5);
+}
+
+/* main action area */
+
+.main-action-area{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.center-info{
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+  padding-top: 130px;
+  box-shadow:inset 0 0 0 2000px rgba(236, 242, 244, 0.5);
+}
+
+.button-left{
+  background: linear-gradient(0deg, rgba(139,0,37,1) 0%, rgb(255,0,0) 100%, rgb(198, 90, 90) 100%);
+}
+
+.button-right{
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgb(66, 125, 189) 100%);
+  margin-left: 10px;
+}
+
+.btn{
+  width: 180px;
+  height: 35px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+/* faq section */
+
+.faq{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.accordion{
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.accordion > div.accordion-header{
+  padding: 15px;
+  z-index: 0;
+  border-bottom: 1px solid #000;
+}
+
+.accordion > div.accordion-body-collapse{
+  padding: 15px;
+  display:none;
+  border-bottom: 1px solid #000;
+}
+
+/* modal */
+
+/* header */
+
+.modal-header{
+  width: 100%;
+  height: 50px;
+  top: 0px;
+  background-color: #8b0025;
+  font-size: 12px;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modal-header-alignment{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+/* modal container */
+
+.modal-container{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  z-index: 50;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content{
+  width: 510px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 350px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.close-fn{
+  align-self: center;
+  margin: 20px;
+}
+
+.products > div.product{
+  text-align: center;
+}
+
+.products > div:first-child{
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+
+.products > div.product img{
+  width:500px;
+  padding: 10px 0;
+}
+
+.products > div.product > div.product-name{
+  color: darkred;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.products > div.product > div.product-description {
+  padding-top: 10px;
+}
+
+.products > div.product > div.product-price {
+  padding-top: 10px; font-weight: bold; font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  h4{
+    width: 100%;
+  }
+
+  .main-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-img{
+    display: none;
+  }
+
+  .content-container{
+    height: 500px;
+    width: 100%;
+  }
+
+  .main-action-area{
+    flex-direction: column;
+    margin-top: 250px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button-right{
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .center-info{
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: -600px;
+    box-shadow: unset;
+    margin-bottom: 100px;
+  }
+
+  .faq > div:first-child, .faq > div:last-child{
+    display: none;
+  }
+
+  .accordion{
+    border-radius: 0;
+  }
+}
+
+
