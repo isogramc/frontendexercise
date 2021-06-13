@@ -13,12 +13,12 @@ The goal of this assignment is to convert the provided designs below to a workin
 
 ### Scope
 
-- [ ] Responsive design
-- [ ] Accessible
-- [ ] Being able to open and close the FAQ items
-- [ ] Only one FAQ item is allowed to be open
-- [ ] Being able to open and close the modal box
-- [ ] Compatible with latest Chrome and Firefox versions 
+- [x] Responsive design
+- [x] Accessible
+- [x] Being able to open and close the FAQ items
+- [x] Only one FAQ item is allowed to be open
+- [x] Being able to open and close the modal box
+- [x] Compatible with latest Chrome and Firefox versions 
 
 ## Design specifics
 
