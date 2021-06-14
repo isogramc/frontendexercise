@@ -45,21 +45,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function flipCarat(number){
-        if($("#kar-" + number).html()=='▼'){
-            $("#kar-" + number).html('&#9650;');
-        } else if ($("#kar-" + number).html()=='▲') {
-            $("#kar-" + number).html('&#9660;');
+        let id = `kar-${number}`;
+        if($(`#${id}`).html()=='▼'){
+            $(`#${id}`).html('&#9650;');
+        } else if ($(`#${id}`).html()=='▲') {
+            $(`#${id}`).html('&#9660;');
         }
     }
 
     $(document).on('click', '#header-0, #header-1, #header-2, #header-3, #header-4, #header-5', function (event) {
-        var number = event.target.id.split('-')[1];
-        $("#content-" + number).toggle();
+        let number = event.target.id.split('-')[1];
+        let id = `content-${number}`;
+        $(`#${id}`).toggle();
         flipCarat(number);
-        for(var i=0; i<6; i++){
+        for(let i=0; i<6; i++){
             if(i!=number){
-                if ($("#content-" + i).css('display') == 'block') {
-                    $("#content-" + i).toggle();
+                let iid = `content-${i}`;
+                if ($(`#${iid}`).css('display') == 'block') {
+                    $(`#${iid}`).toggle();
                     flipCarat(i);
                 }
             }
