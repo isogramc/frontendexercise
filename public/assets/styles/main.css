@@ -101,6 +101,12 @@ h4 {
   z-index: 0;
   border-bottom: 1px solid #000; }
 
+.accordion > div.accordion-header span {
+  color: lightslategray;
+  vertical-align: middle;
+  font-size: 10px;
+  float: right; }
+
 .accordion > div.accordion-body-collapse {
   padding: 15px;
   display: none;

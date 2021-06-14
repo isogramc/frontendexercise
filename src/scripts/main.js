@@ -20,30 +20,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         products.map(product => {
             const path = "/public/assets/images/";
-            var productEl = "<div class='product'><img src='"+path+product.image+".png' alt='"+product.name+"'/>" +
-            "<div class='product-name'>"+product.name+"</div>" +
-            "<div class='product-description'>"+product.description+"</div>" +
-            "<div class='product-price'>&#128;"+product.price+"</div></div>"
+            var productEl = `<div class='product'><img src='${path+product.image}".png' alt='${product.name}'/>
+            <div class='product-name'>${product.name}</div>
+            <div class='product-description'>${product.description}</div>
+            <div class='product-price'>&#128;${product.price}</div></div>`
             $('.products').append(productEl);
         });
     }
 
     function getFAQs(){
 
-        const faqs = [{"How long does red alert stay active after enabling?": "Once you enable Red Alert, it stays active until the moment you have set during the initial setup of your Red Alert Home Alarm. By default this is 08:00 in the morning."},
-            {"When should I replace red alert?": "Lorem 2 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua."},
-            {"What is the benefit of Red Alert over other alarms?": "Lorem 3 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua."},
-            {"What guarantee does red alert give against burglary?": "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
-            {"Why is red alert so cheap compared to competitors?": "Lorem 5 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua."}];
+        const faqs = [{question: "How long does red alert stay active after enabling?", answer: "Once you enable Red Alert, it stays active until the moment you have set during the initial setup of your Red Alert Home Alarm. By default this is 08:00 in the morning."},
+            {question: "When should I replace red alert?", answer: "Lorem 2 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua."},
+            {question: "What is the benefit of Red Alert over other alarms?", answer: "Lorem 3 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua."},
+            {question: "What guarantee does red alert give against burglary?", answer: "Lorem 4 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
+            {question: "Why is red alert so cheap compared to competitors?", answer: "Lorem 5 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua."}];
 
-        for (const [key, value] of Object.entries(faqs)) {
-            var header = "header-"+key, content = "content-"+key, kar = "kar-"+key;
-            for (const [k, v] of Object.entries(value)){
-                var listItem = "<div class='accordion-header' id=\'"+ header +"\'>" + k + "<span id=\'"+ kar +"\' style=\'color: lightslategray;vertical-align:middle;font-size:10px;float:right\'>&#9660;</span></div>" +
-                    "<div class='accordion-body-collapse' id=\'"+content+"\'>" + v + "</div>";
-                $('.accordion').append(listItem);
-            }
-        }
+        faqs.map((faq, index) => {
+            var listItem = `<div class='accordion-header' id='header-${index}'>${faq.question}<span id='kar-${index}'>&#9660;</span></div>
+                <div class='accordion-body-collapse' id='content-${index}'>${faq.answer}</div>`;
+            $('.accordion').append(listItem);
+        });
     }
 
 

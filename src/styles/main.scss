@@ -4,24 +4,24 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
   font-family: Helvetica, sans-serif;
 }
 
-h1, h2, h3{
+h1, h2, h3 {
   margin: 0px;
   padding: 0px;
 }
 
-h4{
+h4 {
   text-align: center;
 }
 
 /* header */
 
-.header{
+.header {
   width: 100%;
   height: 80px;
   top: 0px;
@@ -30,7 +30,7 @@ h4{
   color: #fff;
 }
 
-.header-alignment{
+.header-alignment {
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -38,35 +38,35 @@ h4{
   align-content: center;
 }
 
-.sub-heading{
+.sub-heading {
   font-size: 8px;
 }
 
 /* main content - image backgrounds */
 
-.main-content{
+.main-content {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
 
-.content-container{
+.content-container {
   width:calc(100% / 3);
   height: 500px;
 }
 
-.all-images{
+.all-images {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.left-img{
+.left-img {
   background-image: url("/public/assets/images/product-2-transparent.png");
   box-shadow:inset 0 0 0 2000px rgba(236, 242, 244, 0.5);
 }
 
-.right-img{
+.right-img {
   display: block;
   background-image: url("/public/assets/images/product-1-transparent.png");
   box-shadow:inset 0 0 0 2000px rgba(236, 242, 244, 0.5);
@@ -74,14 +74,14 @@ h4{
 
 /* main action area */
 
-.main-action-area{
+.main-action-area {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 40px;
 }
 
-.center-info{
+.center-info {
   font-size: 30px;
   line-height: 50px;
   text-align: center;
@@ -89,16 +89,16 @@ h4{
   box-shadow:inset 0 0 0 2000px rgba(236, 242, 244, 0.5);
 }
 
-.button-left{
+.button-left {
   background: linear-gradient(0deg, rgb(127, 16, 40) 0%, rgb(255,0,0) 100%, rgb(173, 100, 109) 100%);
 }
 
-.button-right{
+.button-right {
   background: linear-gradient(0deg, rgba(43, 45, 66, 0.68) 0%, rgba(237, 242, 244, 0.68) 100%);
   margin-left: 10px;
 }
 
-.btn{
+.btn {
   width: 180px;
   height: 35px;
   border-radius: 20px;
@@ -107,25 +107,32 @@ h4{
 
 /* faq section */
 
-.faq{
+.faq {
   width: 100%;
   display: flex;
   flex-direction: row;
   margin-top: 20px;
 }
 
-.accordion{
+.accordion {
   border: 1px solid #000;
   border-radius: 5px;
 }
 
-.accordion > div.accordion-header{
+.accordion > div.accordion-header {
   padding: 15px;
   z-index: 0;
   border-bottom: 1px solid #000;
 }
 
-.accordion > div.accordion-body-collapse{
+.accordion > div.accordion-header span {
+  color: lightslategray;
+  vertical-align:middle;
+  font-size:10px;
+  float:right
+}
+
+.accordion > div.accordion-body-collapse {
   padding: 15px;
   display:none;
   border-bottom: 1px solid #000;
@@ -135,7 +142,7 @@ h4{
 
 /* header */
 
-.modal-header{
+.modal-header {
   width: 100%;
   height: 50px;
   top: 0px;
@@ -146,7 +153,7 @@ h4{
   border-top-right-radius: 10px;
 }
 
-.modal-header-alignment{
+.modal-header-alignment {
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -156,7 +163,7 @@ h4{
 
 /* modal container */
 
-.modal-container{
+.modal-container {
   top: 0;
   left: 0;
   right: 0;
@@ -171,7 +178,7 @@ h4{
   align-items: center;
 }
 
-.modal-content{
+.modal-content {
   width: 510px;
   display: flex;
   flex-direction: column;
@@ -181,26 +188,26 @@ h4{
   background: #fff;
 }
 
-.close-fn{
+.close-fn {
   align-self: center;
   margin: 20px;
 }
 
-.products > div.product{
+.products > div.product {
   text-align: center;
 }
 
-.products > div:first-child{
+.products > div:first-child {
   border-bottom: 1px solid #000;
   padding-bottom: 5px;
 }
 
-.products > div.product img{
+.products > div.product img {
   width:500px;
   padding: 10px 0;
 }
 
-.products > div.product > div.product-name{
+.products > div.product > div.product-name {
   color: #7F1028;
   font-weight: bold;
   padding-top: 10px;
@@ -216,38 +223,38 @@ h4{
 
 @media only screen and (max-width: 600px) {
 
-  h4{
+  h4 {
     width: 100%;
   }
 
-  .main-content{
+  .main-content {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
 
-  .right-img{
+  .right-img {
     display: none;
   }
 
-  .content-container{
+  .content-container {
     height: 500px;
     width: 100%;
   }
 
-  .main-action-area{
+  .main-action-area {
     flex-direction: column;
     margin-top: 250px;
     align-items: center;
     justify-content: center;
   }
 
-  .button-right{
+  .button-right {
     margin-top: 10px;
     margin-left: 0;
   }
 
-  .center-info{
+  .center-info {
     font-size: 30px;
     line-height: 50px;
     text-align: center;
@@ -256,11 +263,11 @@ h4{
     margin-bottom: 100px;
   }
 
-  .faq > div:first-child, .faq > div:last-child{
+  .faq > div:first-child, .faq > div:last-child {
     display: none;
   }
 
-  .accordion{
+  .accordion {
     border-radius: 0;
   }
 }
