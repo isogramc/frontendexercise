@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         products.map(product => {
             const path = "/public/assets/images/";
-            var productEl = `<div class='product'><img src='${path+product.image}".png' alt='${product.name}'/>
+            var productEl = `<div class='product'><img src='${path+product.image}.png' alt='${product.name}'/>
             <div class='product-name'>${product.name}</div>
             <div class='product-description'>${product.description}</div>
             <div class='product-price'>&#128;${product.price}</div></div>`
